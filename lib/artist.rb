@@ -10,12 +10,6 @@ class Artist
   def self.all
     @@all
   end
-  
-  def songs
-    Song.all.select do |song|
-      song.artist == self
-  end 
-end
 
 
 
@@ -30,6 +24,12 @@ end
 
 def self.find(name)
   @@all.find { |artist| artist.name = name}
+end
+
+  def songs
+    Song.all.select do |song|
+      song.artist == self
+  end 
 end
 
   def add_song(song)
