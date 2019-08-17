@@ -35,7 +35,8 @@ def self.find(name)
 end
 
   def print_songs
-    songs
+    songs.each do |song|
+      
   end
   
 
